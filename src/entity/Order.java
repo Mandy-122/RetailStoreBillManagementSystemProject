@@ -13,8 +13,6 @@ import lombok.ToString;
 public class Order {
 	private String orderId;
 	private String userId;
-	private String userName;
-	private List<Product> productsList;
 	private double totalAmount;
 	
 

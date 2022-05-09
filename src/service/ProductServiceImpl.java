@@ -17,6 +17,7 @@ public class ProductServiceImpl implements ProductService {
 		Optional<User> optionalUser = productDao.getUserById(userId);
 		return optionalUser;
 	}
+	
 	@Override
 	public int addNewUser(String userName, Date dob, String mobileNumber, String emailId, String address) {
 		// TODO Auto-generated method stub

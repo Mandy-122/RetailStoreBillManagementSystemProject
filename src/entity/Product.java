@@ -16,4 +16,5 @@ public class Product {
 	private int stock_available;
 	private double price;
 
+	
 }

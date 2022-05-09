@@ -25,6 +25,7 @@ public class ProductDaoImpl implements ProductDao {
 				.getConnection("jdbc:mysql://127.0.0.1:3306/retailstorebillmanagementsystem", "root", "wiley");) {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
+			
 			preparedStatement = connection.prepareStatement("SELECT * FROM USER WHERE user_id = ? ;");
 
 			preparedStatement.setString(1, userId);
