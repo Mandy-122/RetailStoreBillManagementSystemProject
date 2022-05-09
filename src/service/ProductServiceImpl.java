@@ -1,6 +1,6 @@
 package service;
 
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,7 +20,9 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public int addNewUser(String userName, Date dob, String mobileNumber, String emailId, String address) {
 		// TODO Auto-generated method stub
-		int rows=productDao.createNewUser(userName,dob,mobileNumber,emailId,address)
+		int rows=productDao.createNewUser(userName,dob,mobileNumber,emailId,address);
+		System.out.println("Successful Impl");
+		System.out.println(rows);
 		return rows;
 	}
 

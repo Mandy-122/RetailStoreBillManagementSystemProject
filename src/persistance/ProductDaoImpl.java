@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,15 +54,15 @@ public class ProductDaoImpl implements ProductDao {
 	public int createNewUser(String userName, Date dob, String mobileNumber, String emailId, String address) {
 		int rows = 0;
 		PreparedStatement preparedStatement = null;
-		try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/metro_system", "root",
+		try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/retailstorebillmanagementsystem", "root",
 				"wiley");) {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			preparedStatement = connection.prepareStatement(
-					"INSERT INTO USERS(USER_NAME, PHONE_NUMBER, EMAIL_ID,DATE_OF_BIRTH, ADDRESS) VALUES (?,?,?,?,?)");
+					"INSERT INTO USER(USER_NAME, PHONE_NUMBER, EMAIL_ID,DATE_OF_BIRTH, ADDRESS) VALUES (?,?,?,?,?)");
 			preparedStatement.setString(1, userName);
 			preparedStatement.setString(2, mobileNumber);
 			preparedStatement.setString(3, emailId);
-			preparedStatement.setDate(4, (java.sql.Date) dob);
+			preparedStatement.setDate(4, dob);
 			preparedStatement.setString(5, address);
 
 			rows = preparedStatement.executeUpdate();
