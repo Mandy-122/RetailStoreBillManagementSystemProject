@@ -1,0 +1,9 @@
+1)readUserId():-If user Id is not Present create new user
+  by taking his details
+2)getCategory()->getProductByCategory() - chirag 
+3)Take input from user - product and no of items - samanavitha
+4)Ask user if he wants to choose more items - samanvitha
+5)show his order with total amount - aeman
+6) confirm order or go back to view products
+update order table and products table
+if confirmed exit - yash
